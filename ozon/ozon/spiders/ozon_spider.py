@@ -89,9 +89,9 @@ def save_to_file(os_versions, filename):
 
 
 def main():
-    searh_page = get_html("https://www.ozon.ru/category/telefony-i-smart-chasy-15501/?sorting=rating", 500)
+    searh_page = get_html("https://www.ozon.ru/category/telefony-i-smart-chasy-15501/?sorting=rating", 700)
     smartphones = parse_searh_page(searh_page)
-    smartphones = smartphones[:100]
+    # smartphones = smartphones[:100]
     os_versions = {}
     for smartphone in smartphones:
         smartphone_page = get_html("https://www.ozon.ru" + smartphone[1], 10)
