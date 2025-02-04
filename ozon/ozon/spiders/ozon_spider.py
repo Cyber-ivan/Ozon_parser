@@ -55,28 +55,6 @@ def parse_searh_page(html):
     return smarphones
 
 
-# def parse_smarphone_page(html, title):
-#     selector = scrapy.Selector(text=html)
-#
-#     if title.split()[0] == "Apple":
-#         dt_element = selector.xpath('//dt[span[text()="Версия iOS"]]')
-#     else:
-#         dt_element = selector.xpath('//dt[span[text()="Версия Android"]]')
-#
-#     dd_element = dt_element.xpath('following-sibling::dd[1]')
-#
-#     os_version = dd_element.xpath('text()').get()
-#     print(dt_element)
-#     print("kek")
-#     return os_version
-#     # if title.split()[0] == "Apple":
-#     #     span_element = selector.xpath('//*[text()="Версия iOS"]')
-#     # else:
-#     #     span_element = selector.xpath('//*[text()="Версия Android"]')
-#     # dt_element = span_element.xpath('..')
-#     # dd_element = dt_element.xpath('following-sibling::dd[1]')
-#     # os_version = dd_element.xpath('text()').get().strip()
-
 def parse_smartphone_page(html, title):
     selector = scrapy.Selector(text=html)
 
